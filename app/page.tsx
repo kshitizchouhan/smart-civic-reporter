@@ -19,7 +19,7 @@ export default function Home() {
 
         <div className="relative container mx-auto px-4 py-24 text-center justify-center items-center">
 
-          <GlowingBadge >
+          <GlowingBadge  className=" " >
             <div >AI Powered Civic Platform</div>
           </GlowingBadge>
           

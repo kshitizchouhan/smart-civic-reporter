@@ -253,3 +253,73 @@
   animation: spin-slow 3s linear infinite;
 }
 
+
+
+
+/* Glowing Badge Styles */
+.glowing-badge-wrapper {
+  @apply relative inline-flex;
+}
+
+.glowing-badge-container {
+  @apply relative rounded-full p-0.5 overflow-hidden;
+  background: linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--border)) 100%);
+}
+
+.glowing-badge-beam {
+  @apply absolute inset-0 rounded-full;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 60deg,
+    hsl(210 100% 60% / 0.8) 80deg,
+    hsl(200 100% 70% / 1) 90deg,
+    hsl(180 100% 65% / 0.8) 100deg,
+    transparent 120deg,
+    transparent 360deg
+  );
+  animation: spin-beam 3s linear infinite;
+}
+
+.glowing-badge-beam::before {
+  content: '';
+  @apply absolute inset-0 rounded-full;
+  background: conic-gradient(
+    from 180deg,
+    transparent 0deg,
+    transparent 60deg,
+    hsl(280 100% 70% / 0.6) 80deg,
+    hsl(260 100% 75% / 0.8) 90deg,
+    hsl(240 100% 70% / 0.6) 100deg,
+    transparent 120deg,
+    transparent 360deg
+  );
+}
+
+.glowing-badge-content {
+  @apply relative bg-white rounded-full px-4 py-2 text-sm font-medium;
+  color: hsl(var(--foreground));
+  box-shadow: 
+    0 4px 20px -4px hsl(210 100% 60% / 0.3),
+    0 8px 32px -8px hsl(260 100% 70% / 0.2),
+    inset 0 1px 0 hsl(0 0% 100% / 0.8);
+}
+
+@keyframes spin-beam {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.glowing-badge-container {
+  @apply relative rounded-full p-0.5 overflow-hidden;
+  background: linear-gradient(135deg, hsl(var(--muted)) 0%, hsl(var(--border)) 100%);
+
+  /* 🔵 BLUE GLOW */
+  box-shadow: 
+    0 0 20px rgba(59,130,246,0.6),
+    0 0 40px rgba(59,130,246,0.4),
+    0 0 60px rgba(59,130,246,0.2);
+}
