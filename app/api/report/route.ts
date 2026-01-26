@@ -4,6 +4,8 @@ import Issue from "@/app/model/Issue";
 import { detectIssueWithOpenAI } from "@/lib/openai-vision";
 import { fallbackDetectIssue } from "@/lib/fallback-ai";
 import { currentUser } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
+import toast from "react-hot-toast";
 
 /* =======================
    POST: CREATE ISSUE
@@ -18,6 +20,8 @@ export async function POST(req: Request) {
         { status: 401 }
       );
     }
+      
+
 
     const body = await req.json();
     await connectDB();
