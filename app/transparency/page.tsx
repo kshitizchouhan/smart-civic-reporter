@@ -18,7 +18,7 @@ export default async function TransparencyPage() {
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
-      <h1 className="text-2xl font-bold mb-6">
+      <h1 className="text-2xl font-bold mb-6 ">
         ✅ Resolved Civic Issues (Transparency Wall)
       </h1>
 

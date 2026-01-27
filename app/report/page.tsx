@@ -10,7 +10,7 @@ import { toast } from "react-hot-toast";
 import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/nextjs";
 
 
-export default  function ReportPage() {
+export default function ReportPage() {
   const [image, setImage] = useState<File | null>(null);
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState<any>(null);
@@ -121,10 +121,45 @@ export default  function ReportPage() {
   return (
     <>
       <SignedIn>
+        <div className=" relative max-h-screen h-full bg-background">
+          {/* floating boxes */}
+{/* 
+          <div className="hidden lg:block absolute top-30 left-20
+          rounded-4xl
+         animate-float
+              shadow-[-10px_7px_50px_rgba(21,60,151,0.8)]
+              ">
+            <img src="./assests/report-1.jpeg" alt="report-1" className=" size-55 rounded-4xl" />
+          </div>
 
-        <div className="max-h-screen bg-background">
-          <div className="mt-3  bg-muted-foreground overflow-hidden  h-full flex bg-linear-to-br from-sky-100 via-blue-100 to-emerald-100 justify-center items-center px-4 py-8 sm:px-6 lg:px-8">
-            <Card className="w-full p-5 border border-2- max-w-xl mx-auto mt-12">
+          <div className="hidden lg:block absolute top-40 right-20
+          rounded-4xl
+         animate-float
+              shadow-[-10px_7px_50px_rgba(21,60,151,0.8)]
+              ">
+            <img src="./assests/report-2.JPG" alt="report-1" className=" size-55 rounded-4xl" />
+          </div>
+
+          <div className="hidden lg:block absolute bottom-20 left-15
+          rounded-4xl
+         animate-float
+              shadow-[-10px_7px_50px_rgba(21,60,151,0.8)]
+              ">
+            <img src="./assests/report-3.jpeg" alt="report-3" className=" size-55 rounded-4xl" />
+          </div>
+
+          <div className="hidden lg:block absolute bottom-10 right-10
+          rounded-4xl
+         animate-float
+              shadow-[-10px_7px_50px_rgba(21,60,151,0.8)]
+              ">
+            <img src="./assests/report-4.jpg" alt="report-4" className=" size-55 rounded-4xl" />
+          </div> */}
+
+
+
+          <div className="pt-15 pb-10 bg-muted-foreground overflow-hidden  h-full flex bg-linear-to-br from-sky-100 via-blue-100 to-emerald-100 justify-center items-center px-4 py-8 sm:px-6 lg:px-8">
+            <Card className="w-full p-5 border border-2- max-w-xl mx-auto mt-11 ">
               <div className="mb-8 sm:mb-12 text-center">
                 <h1 className="text-3xl sm:text-4xl font-semibold bg-linear-to-r from-blue-500 to-emerald-400 bg-clip-text text-transparent mb-3 tracking-tight">
                   Report an Issue
@@ -220,14 +255,16 @@ export default  function ReportPage() {
                     </>
                   )}
                 </Button>
+                <p className="text-center text-xs sm:text-sm text-muted-foreground ">
+                  Your report helps us build a better community
+                </p>
               </div>
 
-              <p className="text-center text-xs sm:text-sm text-muted-foreground mt-6 sm:mt-8">
-                Your report helps us build a better community
-              </p>
             </Card>
           </div>
+
         </div>
+
 
       </SignedIn>
 
