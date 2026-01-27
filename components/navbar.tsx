@@ -36,7 +36,7 @@ export const Navbar = () => {
        {/* Nav Links */}
 <div className="hidden md:flex items-center gap-2">
   {/* Public link (everyone can see) */}
-  <NavLink href="/transparency">View Issues</NavLink>
+  {/* <NavLink href="/transparency">View Issues</NavLink> */}
 
   {/* Protected links (only signed in users) */}
   <SignedIn>

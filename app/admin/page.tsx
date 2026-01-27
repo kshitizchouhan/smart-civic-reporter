@@ -62,7 +62,7 @@ export default async function AdminPage() {
                 <option>Submitted</option>
                 <option>In Progress</option>
                 <option>Resolved</option>
-              </select>
+              </select>.
 
               <button className="bg-blue-600 text-white px-3 py-1 rounded">
                 Update
