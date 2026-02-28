@@ -5,6 +5,7 @@ import { detectIssueWithOpenAI } from "@/lib/openai-vision";
 import { fallbackDetectIssue } from "@/lib/fallback-ai";
 import { currentUser } from "@clerk/nextjs/server";
 
+export const dynamic = "force-dynamic"; // ✅ VERY IMPORTANT
 
 /* =======================
    POST: CREATE ISSUE
@@ -19,8 +20,6 @@ export async function POST(req: Request) {
         { status: 401 }
       );
     }
-      
-
 
     const body = await req.json();
     await connectDB();
@@ -38,7 +37,7 @@ export async function POST(req: Request) {
       location: body.location,
       issueType,
       status: "Submitted",
-      userId: user.id, // ✅ NO red underline (string)
+      userId: user.id,
       createdAt: new Date(),
     });
 
