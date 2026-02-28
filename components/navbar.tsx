@@ -9,6 +9,7 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 
+
 export const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 mx-auto mt-4 max-w-6xl px-4">
@@ -42,6 +43,9 @@ export const Navbar = () => {
           {/* Protected links (only signed in users) */}
           <SignedIn>
             <NavLink href="/dashboard">Dashboard</NavLink>
+            <NavLink href="/admin" variant="default">
+              Admin Panel
+            </NavLink>
             <NavLink href="/report" variant="danger">
               Report Issue
             </NavLink>

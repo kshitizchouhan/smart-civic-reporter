@@ -17,7 +17,7 @@ export function Footer() {
               CivicFix
             </span>
           </div>
-
+  
           {/* Links */}
           <nav className="flex flex-wrap items-center justify-center gap-6">
             {footerLinks.map((link) => (

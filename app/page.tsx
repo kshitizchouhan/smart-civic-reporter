@@ -1,7 +1,6 @@
 import { Footer } from "@/components/footer";
 import { GlowingBadge } from "@/components/glowing-badge";
 import { Navbar } from "@/components/navbar";
-import { IssuesWall } from "@/components/public-issue-wall";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -116,8 +115,8 @@ export default function Home() {
       <WhyCivicFix />
 
       <Separator />
-
-      <IssuesWall />
+   
+    
 
       <Footer />
 
