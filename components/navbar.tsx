@@ -13,6 +13,7 @@ export const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 mx-auto mt-4 max-w-6xl px-4">
       <div className="
+        glass-card
         flex items-center justify-between
         rounded-2xl border border-white/40
         bg-linear-to-br from-indigo-500/10 via-sky-500/10 to-emerald-500/10
@@ -33,19 +34,19 @@ export const Navbar = () => {
           </span>
         </Link>
 
-       {/* Nav Links */}
-<div className="hidden md:flex items-center gap-2">
-  {/* Public link (everyone can see) */}
-  {/* <NavLink href="/transparency">View Issues</NavLink> */}
+        {/* Nav Links */}
+        <div className="hidden md:flex items-center gap-2">
+          {/* Public link (everyone can see) */}
+          {/* <NavLink href="/transparency">View Issues</NavLink> */}
 
-  {/* Protected links (only signed in users) */}
-  <SignedIn>
-    <NavLink href="/dashboard">Dashboard</NavLink>
-    <NavLink href="/report" variant="danger">
-      Report Issue
-    </NavLink>
-  </SignedIn>
-</div>
+          {/* Protected links (only signed in users) */}
+          <SignedIn>
+            <NavLink href="/dashboard">Dashboard</NavLink>
+            <NavLink href="/report" variant="danger">
+              Report Issue
+            </NavLink>
+          </SignedIn>
+        </div>
 
 
         {/* Auth */}

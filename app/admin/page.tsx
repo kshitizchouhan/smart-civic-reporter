@@ -29,7 +29,7 @@ export default async function AdminPage() {
     .lean()) as IssueType[];
 
   return (
-    <div className="p-6 max-w-5xl mx-auto">
+    <div className="p-6 py-25 bg-gradient-to-bottom from-blue-100 to-slate-100 min-w-full text-slate-600 bg-gradient-to-r from-blue-50 to-blue-100 max-w-5xl mx-auto">
       <h1 className="text-2xl font-bold mb-6">
         Admin Dashboard
       </h1>
@@ -38,7 +38,7 @@ export default async function AdminPage() {
         {issues.map((issue) => (
           <div
             key={issue._id}
-            className="border rounded p-4 flex justify-between items-center"
+            className="border glass-card rounded p-4 flex justify-between items-center"
           >
             <div>
               <p className="font-semibold">{issue.issueType}</p>
@@ -57,7 +57,7 @@ export default async function AdminPage() {
               <select
                 name="status"
                 defaultValue={issue.status}
-                className="border p-1 mr-2"
+                className="border bg-slate-50  border-slate-500 rounded-md border-0.5 p-1 mr-2"
               >
                 <option>Submitted</option>
                 <option>In Progress</option>

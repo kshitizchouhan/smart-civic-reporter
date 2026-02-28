@@ -17,8 +17,8 @@ export default async function TransparencyPage() {
     .lean()) as IssueType[];
 
   return (
-    <div className="p-6 max-w-5xl mx-auto">
-      <h1 className="text-2xl font-bold mb-6 ">
+    <div className="p-6 py-25 max-w-5xl mx-auto">
+      <h1 className="text-2xl font-bold mb-6 text-gray-800 ">
         ✅ Resolved Civic Issues (Transparency Wall)
       </h1>
 
